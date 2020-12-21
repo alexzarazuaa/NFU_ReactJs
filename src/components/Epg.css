@@ -41,6 +41,7 @@ ion-title {
     text-align: center;
 }
 
+
 /*------------------------------------*\
   #DISEÑO DE CADA CARD
 \*------------------------------------*/
@@ -63,10 +64,10 @@ ion-card {
     }
 }
 
-@media (min-width: 460px) {
+@media (min-width: 860px) {
     ion-slide {
-        width: 480px !important;
-        height: 210px !important;
+        width: 230px !important;
+        height: 310px !important;
         display: flex;
         margin-bottom: 10px;
         margin-top: 120px;

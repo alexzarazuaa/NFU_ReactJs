@@ -10,9 +10,7 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import {square,tv} from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
+import {tv} from 'ionicons/icons';
 import Epg from './components/Epg';
 
 /* Core CSS required for Ionic components to work properly */
@@ -39,20 +37,10 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
           <Route path="/epg" component={Epg} exact={true} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 1</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 2</IonLabel>
-          </IonTabButton>
           <IonTabButton tab="Epg" href="/epg">
             <IonIcon icon={tv} />
             <IonLabel>Epg</IonLabel>

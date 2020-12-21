@@ -9,7 +9,7 @@ import {
   IonCard,
   IonCardHeader,
   IonCardTitle,
-  IonCardContent
+  IonCardContent,
 } from '@ionic/react';
 
 //Assets
@@ -29,7 +29,6 @@ export default class Epg extends React.Component {
       title: epgData.title,
     };
 
-    this.handleClick = this.handleClick.bind(this);
     this.ConvertSeconds = this.ConvertSeconds.bind(this);
 
   }
@@ -47,25 +46,6 @@ export default class Epg extends React.Component {
     return new Date(seconds * 1000).toISOString().substr(11, 8)
   }
 
-  /**
-   * Function that I used to launch and alert that show the start and the end of concretly TVE program
-   * @param {*} start 
-   * @param {*} duration 
-   * @param {*} name 
-   */
-  handleClick(start, duration, name) {
-    // console.log(this.state);
-    const alert = document.createElement('ion-alert');
-    alert.cssClass = 'my-custom-class';
-    alert.header = this.state.title;
-    alert.subHeader = name;
-    //alert.message = ("start:" + start + " End:" + (start + duration));
-    alert.message = ("start:" + this.ConvertSeconds(start) + " End:" + this.ConvertSeconds((start + duration)));
-    alert.buttons = ['OK'];
-    document.body.appendChild(alert);
-    return alert.present();
-
-  }
 
   /**
    * I use this function to show using an alert the Description of TVE program
@@ -108,7 +88,7 @@ export default class Epg extends React.Component {
     /**
      * Options of Ionic Slides
      */
-    
+
     const slideOpts = {
       slidesPerView: 'auto',
       zoom: true,
@@ -136,24 +116,29 @@ export default class Epg extends React.Component {
                   <IonCardTitle>
                     <ion-chip>
                       <ion-icon name="heart" color="dark"></ion-icon>
-                      <ion-label key={index}
-                        onClick={
-                          () => this.handleClick(eventEPG.spa.start, eventEPG.spa.duration, eventEPG.spa.name)
-                        }>
+                      <ion-label>
                         {eventEPG.spa.name}
                       </ion-label>
                     </ion-chip>
-
-
                   </IonCardTitle>
                 </IonCardHeader>
 
                 <IonCardContent>
+                  
+                  <IonCardTitle>
+                    {"Desde:" + this.ConvertSeconds(eventEPG.spa.start)}
+                    {" Hasta:" +  this.ConvertSeconds((eventEPG.spa.start + eventEPG.spa.duration))}
+                  </IonCardTitle>
+
+
+
                   <ion-buttons slot="primary">
-                  <ion-title key={index} onClick={() => this.DescriptionClik(eventEPG.spa.ext.text)}>
-                     <h1>Descripcion</h1> 
-                  </ion-title>
+                    <ion-title key={index} onClick={() => this.DescriptionClik(eventEPG.spa.ext.text)}>
+                      <h1>Descripcion</h1>
+                    </ion-title>
                   </ion-buttons>
+
+                  
                 </IonCardContent>
               </IonCard>
             </IonSlide>
