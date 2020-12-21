@@ -8,13 +8,16 @@ import {
   IonLabel,
   IonCard,
   IonCardHeader,
-  IonCardSubtitle,
   IonCardTitle,
   IonCardContent
-
 } from '@ionic/react';
+
 //Assets
 import './Epg.css';
+
+/**
+ * Epg Class
+ */
 
 export default class Epg extends React.Component {
 
@@ -27,7 +30,7 @@ export default class Epg extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
-    //this.ConvertSeconds = this.ConvertSeconds.bind(this);
+    this.ConvertSeconds = this.ConvertSeconds.bind(this);
 
   }
 
@@ -36,12 +39,22 @@ export default class Epg extends React.Component {
   }
 
 
+  /**
+   * Function to covert the program seconds to Hour + minutes + seconds
+   * @param {*} seconds 
+   */
   ConvertSeconds(seconds) {
     return new Date(seconds * 1000).toISOString().substr(11, 8)
   }
 
+  /**
+   * Function that I used to launch and alert that show the start and the end of concretly TVE program
+   * @param {*} start 
+   * @param {*} duration 
+   * @param {*} name 
+   */
   handleClick(start, duration, name) {
-    console.log(this.state);
+    // console.log(this.state);
     const alert = document.createElement('ion-alert');
     alert.cssClass = 'my-custom-class';
     alert.header = this.state.title;
@@ -53,9 +66,14 @@ export default class Epg extends React.Component {
     return alert.present();
 
   }
+
+  /**
+   * I use this function to show using an alert the Description of TVE program
+   * @param {*} text 
+   */
   DescriptionClik(text) {
-    console.log(this.state.events.spa);
-    console.log(text)
+    // console.log(this.state.events.spa);
+    // console.log(text)
     const alert = document.createElement('ion-alert');
     alert.cssClass = 'my-custom-class';
     alert.header = this.state.title;
@@ -66,6 +84,12 @@ export default class Epg extends React.Component {
     return alert.present();
   }
 
+  /**
+   *  The function convertUTCtoDate convert the seconds that we have in the Epg json 
+   *  to weekday + number , month and finaly the year 
+   *  from ES locale
+   * @param {*} utcEpoch 
+   */
   convertUTCtoDate(utcEpoch) {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', time: 'numeric' };
     //console.log(options)
@@ -74,10 +98,17 @@ export default class Epg extends React.Component {
     return d.toLocaleString("es-ES", options);
   }
 
+  /**
+   * The Render 
+   */
 
   render() {
-    console.log(this.state);
-    console.log("render");
+
+
+    /**
+     * Options of Ionic Slides
+     */
+    
     const slideOpts = {
       slidesPerView: 'auto',
       zoom: true,
@@ -118,12 +149,10 @@ export default class Epg extends React.Component {
                 </IonCardHeader>
 
                 <IonCardContent>
-                  <ion-title key={index} onClick={
-                    () => this.DescriptionClik(eventEPG.spa.ext.text)
-                  }>
-                    Descripcion
-                    </ion-title>
                   <ion-buttons slot="primary">
+                  <ion-title key={index} onClick={() => this.DescriptionClik(eventEPG.spa.ext.text)}>
+                     <h1>Descripcion</h1> 
+                  </ion-title>
                   </ion-buttons>
                 </IonCardContent>
               </IonCard>

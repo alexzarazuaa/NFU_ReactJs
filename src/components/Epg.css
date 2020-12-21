@@ -58,15 +58,17 @@ ion-card {
 
 @media (max-width: 860px) {
     ion-slide {
-        width: 110px !important;
+       width: 480px !important;
         height: 210px !important;
     }
 }
 
-@media (min-width: 860px) {
+@media (min-width: 460px) {
     ion-slide {
-        width: 280px !important;
+        width: 480px !important;
         height: 210px !important;
+        display: flex;
+        margin-bottom: 10px;
         margin-top: 120px;
     }
 }
