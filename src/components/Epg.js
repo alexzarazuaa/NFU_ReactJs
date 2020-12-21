@@ -22,33 +22,39 @@ export default class Epg extends React.Component {
     super(props);
     this.state = {
       events: Object.values(epgData.events).reverse(),
-
       name: epgData.name,
       title: epgData.title,
     };
 
     this.handleClick = this.handleClick.bind(this);
+    //this.ConvertSeconds = this.ConvertSeconds.bind(this);
 
   }
 
   componentDidMount() {
     //Ja vorem
   }
-  handleClick(start, inc, name) {
+
+
+  ConvertSeconds(seconds) {
+    return new Date(seconds * 1000).toISOString().substr(11, 8)
+  }
+
+  handleClick(start, duration, name) {
     console.log(this.state);
     const alert = document.createElement('ion-alert');
     alert.cssClass = 'my-custom-class';
     alert.header = this.state.title;
     alert.subHeader = name;
-    alert.message = ("start:" + start + " End:" + (start + inc));
+    //alert.message = ("start:" + start + " End:" + (start + duration));
+    alert.message = ("start:" + this.ConvertSeconds(start) + " End:" + this.ConvertSeconds((start + duration)));
     alert.buttons = ['OK'];
     document.body.appendChild(alert);
-    // alert("start:" + start + " End:" + (start + inc));
     return alert.present();
 
   }
   DescriptionClik(text) {
-    console.log(this.state.events.spa.ext);
+    console.log(this.state.events.spa);
     console.log(text)
     const alert = document.createElement('ion-alert');
     alert.cssClass = 'my-custom-class';
@@ -84,10 +90,10 @@ export default class Epg extends React.Component {
 
       <IonRow>
         <IonLabel className="my-label">
-        <ion-header>
-          {this.state.title}
-          <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Logo_TVE-1.svg"></img>
-        </ion-header>
+          <ion-header>
+            {this.state.title}
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Logo_TVE-1.svg"></img>
+          </ion-header>
         </IonLabel>
         <IonSlides options={slideOpts}>
 
@@ -113,7 +119,7 @@ export default class Epg extends React.Component {
 
                 <IonCardContent>
                   <ion-title key={index} onClick={
-                    () => this.handleClick(eventEPG.spa.ext.text)
+                    () => this.DescriptionClik(eventEPG.spa.ext.text)
                   }>
                     Descripcion
                     </ion-title>
