@@ -1,69 +1,72 @@
-.icon{
+/*------------------------------------*\
+  #INDEX
+  1- ICONO DE TVE
+  2- TITULO DE CADA PROGRAMA(EN CADA CARD)
+  3-NOMBRE DEL CANAL
+  4-DISEÑO DE CADA CARD
+  5-MEDIA SLIDES
+
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #ICONO DE TVE
+\*------------------------------------*/
+
+.icon {
     font-size: 30px;
-    padding:15px;
+    padding: 15px;
     width: 60px;
     height: 60px;
     text-align: center;
     line-height: 50px;
 }
+
+/*------------------------------------*\
+  #TITULOS DE LOS PROGRMAS
+\*------------------------------------*/
+
+ion-title {
+    background-color: burlywood;
+    border: 2px solid #000000 !important;
+    border-radius: 25px;
+}
+
+/*------------------------------------*\
+  #NOMBRE DEL CANAL (TVE)
+\*------------------------------------*/
+
 .my-label {
     font-size: 3em;
     padding: 15px;
     text-align: center;
-    margin-left: 420px;
 }
-ion-col{
-    padding:3px !important;
-}
-ion-slide{
+
+/*------------------------------------*\
+  #DISEÑO DE CADA CARD
+\*------------------------------------*/
+
+ion-card {
     border: 2px solid #000000 !important;
-    border-radius:25px !important;
+    border-radius: 25px !important;
     background-color: #f0f0f0 !important;
 }
-.swiper-wrapper{
-    width:10000px!important;
-}
+
+
+/*------------------------------------*\
+  #MEDIA SLIDES
+\*------------------------------------*/
+
 @media (max-width: 860px) {
-    ion-slide{
-        width: 110px !important; 
+    ion-slide {
+        width: 110px !important;
         height: 210px !important;
     }
-    .card-image {
-        width: 90px !important; 
-        height: 90px !important;        
-    }
-    .cardLabel {
-        position:relative;
-        bottom:5px; 
-        font-size: 0.5em;           
-        
-    }
 }
-@media (min-width: 860px) {
 
-    ion-slide{
-        width: 280px !important; 
+@media (min-width: 860px) {
+    ion-slide {
+        width: 280px !important;
         height: 210px !important;
         margin-top: 120px;
-        
-
     }
-    .card-image {
-        width: 150px !important; 
-        height: 150px !important; 
-    }
-    .cardLabel {
-        position:relative;
-        bottom:10px;
-        font-size: 0.75em;    
-    }
-}
-.card-image {
-    border-radius:20%!important;
-    margin: auto !important;
-    overflow: hidden;
-}
-
-ion-title{
-    background-color: black;
 }

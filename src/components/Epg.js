@@ -101,7 +101,7 @@ export default class Epg extends React.Component {
             <IonSlide >
               <IonCard key={'col_' + index}>
                 <IonCardHeader>
-                  <IonCardSubtitle>{this.convertUTCtoDate(eventEPG.spa.start)}</IonCardSubtitle>
+                  <IonCardTitle>{this.convertUTCtoDate(eventEPG.spa.start)}</IonCardTitle>
                   <IonCardTitle>
                     <ion-chip>
                       <ion-icon name="heart" color="dark"></ion-icon>
@@ -124,9 +124,6 @@ export default class Epg extends React.Component {
                     Descripcion
                     </ion-title>
                   <ion-buttons slot="primary">
-                    <ion-button color="secondary">
-                      <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-                    </ion-button>
                   </ion-buttons>
                 </IonCardContent>
               </IonCard>
