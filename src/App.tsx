@@ -10,8 +10,9 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import {tv} from 'ionicons/icons';
+import {tv,footballOutline} from 'ionicons/icons';
 import Epg from './components/Epg';
+import Home from './components/nfu/homeComponent';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -38,6 +39,7 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route path="/epg" component={Epg} exact={true} />
+          <Route path="/home" component={Home} exact={true} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -45,8 +47,13 @@ const App: React.FC = () => (
             <IonIcon icon={tv} />
             <IonLabel>Epg</IonLabel>
           </IonTabButton>
+          <IonTabButton tab="Home" href="/home">
+            <IonIcon icon={footballOutline} />
+            <IonLabel>NFU</IonLabel>
+          </IonTabButton>
         </IonTabBar>
       </IonTabs>
+      
     </IonReactRouter>
   </IonApp>
 );
