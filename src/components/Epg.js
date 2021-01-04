@@ -133,9 +133,9 @@ export default class Epg extends React.Component {
 
 
                   <ion-buttons slot="primary">
-                    <ion-title key={index} onClick={() => this.DescriptionClik(eventEPG.spa.ext.text)}>
+                    <h1 key={index} onClick={() => this.DescriptionClik(eventEPG.spa.ext.text)}>
                       <h1>Descripcion</h1>
-                    </ion-title>
+                    </h1>
                   </ion-buttons>
 
                   

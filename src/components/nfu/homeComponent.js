@@ -1,6 +1,6 @@
 //Dependencies
 import React from 'react';
-import { IonToolbar, IonTitle, IonButtons, IonBackButton, IonButton, IonIcon, IonMenuButton, IonSearchbar, IonSegment, IonSegmentButton } from '@ionic/react';
+import { IonToolbar,IonAvatar, IonTitle, IonButtons, IonBackButton, IonButton, IonIcon, IonMenuButton, IonSearchbar, IonSegment, IonSegmentButton } from '@ionic/react';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical } from 'ionicons/icons';
 
 
@@ -49,11 +49,14 @@ export default class Home extends React.Component {
                     <ion-header>
                         <IonToolbar color="dark">
                             <IonButtons slot="secondary">
+
                                 <IonButton>
-                                    <IonIcon slot="icon-only" icon={personCircle} />
+                                    <ion-searchbar show-cancel-button="focus"></ion-searchbar>
                                 </IonButton>
                                 <IonButton>
-                                    <IonIcon slot="icon-only" icon={search} />
+                                    <IonAvatar>
+                                        <img src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png" />
+                                    </IonAvatar>
                                 </IonButton>
                             </IonButtons>
                             <IonButtons slot="primary">
@@ -61,18 +64,19 @@ export default class Home extends React.Component {
                                     <IonIcon slot="icon-only" ios={ellipsisHorizontal} md={ellipsisVertical} />
                                 </IonButton>
                             </IonButtons>
-                            <h1>Dark Toolbar</h1>
+                            <ion-title>Home</ion-title>
+                    
 
                         </IonToolbar>
                     </ion-header>
 
                     <ion-content class="ion-padding">
-                        <h1>Main Content</h1>
+                        <ion-title>Hey</ion-title>
                     </ion-content>
 
                     <ion-footer>
                         <ion-toolbar>
-                            <ion-title>Footer</ion-title>
+                            <ion-title class="footer">&copy; NFU 2021</ion-title>
                         </ion-toolbar>
                     </ion-footer>
                 </ion-app>
