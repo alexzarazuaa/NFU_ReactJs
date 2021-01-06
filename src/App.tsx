@@ -10,9 +10,10 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import {tv,footballOutline} from 'ionicons/icons';
+import { tv, footballOutline, phonePortrait, apps } from 'ionicons/icons';
 import Epg from './components/Epg';
-import Home from './components/nfu/homeComponent';
+import Menu from './components/menu';
+import Contact from './components/contact'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,27 +34,37 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route path="/epg" component={Epg} exact={true} />
-          <Route path="/home" component={Home} exact={true} />
+          <Route path="/home" component={Menu} exact={true} />
+          <Route path="/contact" component={Contact} exact={true} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="Epg" href="/epg">
+          {/* <IonTabButton tab="Epg" href="/epg">
             <IonIcon icon={tv} />
             <IonLabel>Epg</IonLabel>
+          </IonTabButton> */}
+          <IonTabButton tab="Contact" href="/contact">
+            <IonIcon icon={phonePortrait} />
+            <IonLabel>Contact Us</IonLabel>
           </IonTabButton>
           <IonTabButton tab="Home" href="/home">
+            <IonIcon icon={apps} />
+            <IonLabel>Home</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="Contact" href="/contact">
             <IonIcon icon={footballOutline} />
-            <IonLabel>NFU</IonLabel>
+            <IonLabel>Modalities</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-      
+
     </IonReactRouter>
   </IonApp>
 );
