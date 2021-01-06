@@ -1,11 +1,12 @@
 //Dependencies
 import React from 'react';
-import { IonToolbar,IonAvatar, IonTitle, IonButtons, IonBackButton, IonButton, IonIcon, IonMenuButton, IonSearchbar, IonSegment, IonSegmentButton } from '@ionic/react';
+import { IonToolbar, IonAvatar, IonTitle, IonButtons, IonBackButton, IonButton, IonIcon, IonMenuButton, IonSearchbar, IonSegment, IonSegmentButton } from '@ionic/react';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical } from 'ionicons/icons';
 
 
 //Assets
 import './homeComponent.css';
+import Menu from './menuComponent';
 
 /**
  * Epg Class
@@ -48,6 +49,7 @@ export default class Home extends React.Component {
                 <ion-app>
                     <ion-header>
                         <IonToolbar color="dark">
+
                             <IonButtons slot="secondary">
 
                                 <IonButton>
@@ -64,14 +66,20 @@ export default class Home extends React.Component {
                                     <IonIcon slot="icon-only" ios={ellipsisHorizontal} md={ellipsisVertical} />
                                 </IonButton>
                             </IonButtons>
+                            <IonButtons slot="primary">
+                                <IonButton color="danger">
+                                    <IonIcon slot="icon-only" ios={ellipsisHorizontal} md={ellipsisVertical} />
+                                </IonButton>
+                            </IonButtons>
                             <ion-title>Home</ion-title>
-                    
+
+
 
                         </IonToolbar>
                     </ion-header>
 
                     <ion-content class="ion-padding">
-                        <ion-title>Hey</ion-title>
+                        <Menu />
                     </ion-content>
 
                     <ion-footer>
