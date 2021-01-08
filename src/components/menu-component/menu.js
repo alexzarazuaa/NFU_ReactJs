@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Navbar from './navbar';
+import Navbar from '../navbar-component/navbar';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './home';
-import About from './about';
-import Contact from './contact';
+import Home from '../../pages/home';
+import About from '../../pages/about';
+import Contact from '../../pages/contact';
+import Footer from '../footer-component/footer'
 import './menu.css';
 
 class Menu extends Component {
@@ -29,9 +30,7 @@ class Menu extends Component {
 
 
                     <ion-footer>
-                        <ion-toolbar>
-                            <ion-title class="footer">&copy; NFU 2021</ion-title>
-                        </ion-toolbar>
+                       <Footer />
                     </ion-footer>
 
                 </ion-app>

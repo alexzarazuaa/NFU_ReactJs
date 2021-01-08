@@ -1,6 +1,6 @@
 //Dependencies
 import React from 'react';
-import epgData from '../data/epg.json';
+import epgData from '../../data/epg.json';
 import {
   IonSlides,
   IonSlide,

@@ -32,10 +32,9 @@ class Navbar extends Component {
                 <ion-nav className="navBar">
 
                     <IonButton color="dark" href="/home">Home</IonButton>
+                    <IonButton color="dark" href="/signin">Sign In</IonButton>
+                    <IonButton color="dark" href="/signup">Sign Up</IonButton>
 
-                    <IonButton color="dark" href="/about/">About</IonButton>
-
-                    <IonButton color="dark" href="/contact">Contact</IonButton>
 
                 </ion-nav>
 

@@ -11,9 +11,11 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { tv, footballOutline, phonePortrait, apps } from 'ionicons/icons';
-import Epg from './components/Epg';
-import Menu from './components/menu';
-import Contact from './components/contact'
+import Epg from './components/Epg-Component/Epg';
+import Menu from './components/menu-component/menu';
+import Contact from './pages/contact'
+import Login from './components/loginRegister-components/login';
+import Register from './components/loginRegister-components/register';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -42,6 +44,8 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/epg" component={Epg} exact={true} />
           <Route path="/home" component={Menu} exact={true} />
+          <Route path="/signin" component={Login} exact={true} />
+          <Route path="/signup" component={Register} exact={true} />
           <Route path="/contact" component={Contact} exact={true} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
