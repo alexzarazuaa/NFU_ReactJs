@@ -40,7 +40,7 @@ class Modalities extends React.Component {
                         <ion-icon name="pin" slot="start"></ion-icon>
                         <ion-label>
                             Available fields</ion-label>
-                        <ion-button fill="outline" slot="end">View</ion-button>
+                        <ion-button fill="outline" href="/football-7" slot="end">View</ion-button>
                     </ion-item>
 
                     <ion-card-content>
@@ -61,7 +61,7 @@ class Modalities extends React.Component {
                         <ion-icon name="pin" slot="start"></ion-icon>
                         <ion-label>
                             Available fields</ion-label>
-                        <ion-button fill="outline" slot="end">View</ion-button>
+                        <ion-button href="/football-11" fill="outline" slot="end">View</ion-button>
                     </ion-item>
 
                     <ion-card-content>

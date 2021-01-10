@@ -18,6 +18,8 @@ import Login from './components/loginRegister-components/login';
 import Register from './components/loginRegister-components/register';
 import Modalities from './components/modalities-component/modalities';
 import IndoorFootball from './pages/indoorFootball';
+import Football7 from './pages/football7';
+import Football_11 from './pages/football11';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -52,6 +54,8 @@ const App: React.FC = () => (
           <Route path="/contact" component={Contact}  />
           <Route path="/modalities" component={Modalities}  />
           <Route path="/indoorfootball" component={IndoorFootball}  />
+          <Route path="/football-7" component={Football7}  />
+          <Route path="/football-11" component={Football_11}  />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
