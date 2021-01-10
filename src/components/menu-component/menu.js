@@ -22,7 +22,7 @@ class Menu extends Component {
                                 <Route path="/contact" component={Contact} />
                                 
                             </Switch>
-
+                            <Home/>
                             
                         </div>
                     </BrowserRouter>

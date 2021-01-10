@@ -16,6 +16,8 @@ import Menu from './components/menu-component/menu';
 import Contact from './pages/contact'
 import Login from './components/loginRegister-components/login';
 import Register from './components/loginRegister-components/register';
+import Modalities from './components/modalities-component/modalities';
+import IndoorFootball from './pages/indoorFootball';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -37,6 +39,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -47,6 +50,8 @@ const App: React.FC = () => (
           <Route path="/signin" component={Login} exact={true} />
           <Route path="/signup" component={Register} exact={true} />
           <Route path="/contact" component={Contact} exact={true} />
+          <Route path="/modalities" component={Modalities} exact={true} />
+          <Route path="/indoorfootball" component={IndoorFootball} exact={true} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -62,7 +67,7 @@ const App: React.FC = () => (
             <IonIcon icon={apps} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="Contact" href="/contact">
+          <IonTabButton tab="Modalities" href="/modalities">
             <IonIcon icon={footballOutline} />
             <IonLabel>Modalities</IonLabel>
           </IonTabButton>
