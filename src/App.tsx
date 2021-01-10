@@ -47,18 +47,18 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/epg" component={Epg} exact={true} />
           <Route path="/home" component={Menu} exact={true} />
-          <Route path="/signin" component={Login} exact={true} />
-          <Route path="/signup" component={Register} exact={true} />
-          <Route path="/contact" component={Contact} exact={true} />
-          <Route path="/modalities" component={Modalities} exact={true} />
-          <Route path="/indoorfootball" component={IndoorFootball} exact={true} />
+          <Route path="/signin" component={Login}  />
+          <Route path="/signup" component={Register}  />
+          <Route path="/contact" component={Contact}  />
+          <Route path="/modalities" component={Modalities}  />
+          <Route path="/indoorfootball" component={IndoorFootball}  />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          {/* <IonTabButton tab="Epg" href="/epg">
+          <IonTabButton tab="Epg" href="/epg">
             <IonIcon icon={tv} />
             <IonLabel>Epg</IonLabel>
-          </IonTabButton> */}
+          </IonTabButton>
           <IonTabButton tab="Contact" href="/contact">
             <IonIcon icon={phonePortrait} />
             <IonLabel>Contact Us</IonLabel>

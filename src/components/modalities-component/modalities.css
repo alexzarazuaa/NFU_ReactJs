@@ -1,0 +1,11 @@
+
+:root{
+    --general-size:auto;
+}
+
+.modalities{
+    background-color: lightblue;
+    width: var(--general-size);
+    height: var(--general-size);
+    overflow: var(--general-size);
+}

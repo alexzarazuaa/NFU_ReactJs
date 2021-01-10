@@ -1,11 +1,12 @@
 import { IonPage } from "@ionic/react";
 import React from "react";
+import './modalities.css'
 
 
 class Modalities extends React.Component {
     render() {
         return (
-            <IonPage>
+            <IonPage class="modalities">
 
                 {/* INDOOR FOOTBALL CARD */}
                 <ion-card>
