@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './footer.css';
 
+
+/**
+ * FOOTER COMPONENT FOR ALL NFU APP
+ */
+
 class Footer extends Component {
     render() {
         return (

@@ -12,15 +12,10 @@ class Home extends React.Component {
             <IonPage>
                 <ion-header>
                     <Navbar />
-                    <div class="banner">
-                        <div class="container">
-                            <h2 class="logo-font">NOS FALTA UNO </h2>
-                            <p>Inicia tu Mejor  <i>PACHANGA</i> </p>
-                        </div>
-                    </div>
+                    <ion-title class="title_home">NOS FALTA UNO </ion-title>
+                    <ion-title class="title_sub">Inicia tu Mejor  <i>PACHANGA</i> </ion-title>
+                  
                 </ion-header>
-
-
 
 
                 <Footer />

@@ -10,7 +10,7 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { tv, footballOutline, phonePortrait, apps } from 'ionicons/icons';
+import { tv, footballOutline, phonePortrait, logoXbox } from 'ionicons/icons';
 import Epg from './components/Epg-Component/Epg';
 import Home from './components/home-component/home';
 import Contact from './pages/contact'
@@ -20,6 +20,7 @@ import Modalities from './components/modalities-component/modalities';
 import IndoorFootball from './pages/indoorFootball';
 import Football7 from './pages/football7';
 import Football_11 from './pages/football11';
+import Profile from './components/profile-component/profile'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -49,32 +50,36 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/epg" component={Epg} exact={true} />
           <Route path="/home" component={Home} exact={true} />
-          <Route path="/signin" component={Login}  />
-          <Route path="/signup" component={Register}  />
-          <Route path="/contact" component={Contact}  />
-          <Route path="/modalities" component={Modalities}  />
-          <Route path="/indoorfootball" component={IndoorFootball}  />
-          <Route path="/football-7" component={Football7}  />
-          <Route path="/football-11" component={Football_11}  />
+          <Route path="/signin" component={Login} />
+          <Route path="/signup" component={Register} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/modalities" component={Modalities} />
+          <Route path="/indoorfootball" component={IndoorFootball} />
+          <Route path="/football-7" component={Football7} />
+          <Route path="/football-11" component={Football_11} />
+          <Route path="/profile" component={Profile} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
+
         <IonTabBar slot="bottom">
-          <IonTabButton tab="Epg" href="/epg">
-            <IonIcon icon={tv} />
-            <IonLabel>Epg</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="Contact" href="/contact">
-            <IonIcon icon={phonePortrait} />
-            <IonLabel>Contact Us</IonLabel>
-          </IonTabButton>
           <IonTabButton tab="Home" href="/home">
-            <IonIcon icon={apps} />
+            <IonIcon icon={logoXbox} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
           <IonTabButton tab="Modalities" href="/modalities">
             <IonIcon icon={footballOutline} />
             <IonLabel>Modalities</IonLabel>
           </IonTabButton>
+
+          <IonTabButton tab="Contact" href="/contact">
+            <IonIcon icon={phonePortrait} />
+            <IonLabel>Contact Us</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="Epg" href="/epg">
+            <IonIcon icon={tv} />
+            <IonLabel>Epg</IonLabel>
+          </IonTabButton>
+
         </IonTabBar>
       </IonTabs>
 
