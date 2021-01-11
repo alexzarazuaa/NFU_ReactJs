@@ -1,5 +1,6 @@
 import { IonPage } from "@ionic/react";
 import React from "react";
+import Footer from '../components/footer-component/footer';
 import '../theme/indoor.css'
 
 
@@ -103,12 +104,7 @@ class IndoorFootball extends React.Component {
 
 
 
-
-                <ion-footer>
-                    <ion-toolbar>
-                        <ion-title class="footer">&copy; NFU 2021</ion-title>
-                    </ion-toolbar>
-                </ion-footer>
+                <Footer />
 
             </IonPage >
         );

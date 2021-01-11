@@ -1,5 +1,6 @@
 import { IonCheckbox, IonPage, IonText, IonItem, IonLabel, IonInput, IonButton } from "@ionic/react";
 import React from "react";
+import Footer from '../footer-component/footer';
 import './login.css';
 
 class Login extends React.Component {
@@ -26,11 +27,7 @@ class Login extends React.Component {
 
                 </form>
 
-                <ion-footer>
-                    <ion-toolbar>
-                        <ion-title class="footer">&copy; NFU 2021</ion-title>
-                    </ion-toolbar>
-                </ion-footer>
+              <Footer/>
 
             </IonPage >
         );

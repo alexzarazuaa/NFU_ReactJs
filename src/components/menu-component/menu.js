@@ -29,9 +29,8 @@ class Menu extends Component {
 
 
 
-                    <ion-footer>
                        <Footer />
-                    </ion-footer>
+                
 
                 </ion-app>
             </>
