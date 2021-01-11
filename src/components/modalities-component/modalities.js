@@ -1,6 +1,7 @@
 import { IonPage } from "@ionic/react";
 import React from "react";
 import Footer from '../footer-component/footer'
+import Navbar from '../navbar-component/navbar'
 import './modalities.css'
 
 
@@ -8,6 +9,7 @@ class Modalities extends React.Component {
     render() {
         return (
             <IonPage class="modalities">
+                <Navbar/>
 
                 {/* INDOOR FOOTBALL CARD */}
                 <ion-card>

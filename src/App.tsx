@@ -12,7 +12,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { tv, footballOutline, phonePortrait, apps } from 'ionicons/icons';
 import Epg from './components/Epg-Component/Epg';
-import Menu from './components/menu-component/menu';
+import Home from './components/home-component/home';
 import Contact from './pages/contact'
 import Login from './components/loginRegister-components/login';
 import Register from './components/loginRegister-components/register';
@@ -48,7 +48,7 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route path="/epg" component={Epg} exact={true} />
-          <Route path="/home" component={Menu} exact={true} />
+          <Route path="/home" component={Home} exact={true} />
           <Route path="/signin" component={Login}  />
           <Route path="/signup" component={Register}  />
           <Route path="/contact" component={Contact}  />

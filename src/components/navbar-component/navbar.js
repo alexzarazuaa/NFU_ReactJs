@@ -10,7 +10,6 @@ class Navbar extends Component {
 
             <IonToolbar color="dark">
 
-
                 <IonButtons slot="secondary">
 
                     <IonButton>
@@ -31,14 +30,12 @@ class Navbar extends Component {
 
                 <ion-nav className="navBar">
 
-                    <IonButton color="dark" href="/home">Home</IonButton>
+                    
                     <IonButton color="dark" href="/signin">Sign In</IonButton>
                     <IonButton color="dark" href="/signup">Sign Up</IonButton>
 
 
                 </ion-nav>
-
-
 
             </IonToolbar>
 
