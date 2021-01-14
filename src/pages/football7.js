@@ -28,7 +28,7 @@ class Football7 extends React.Component {
                         <ion-item>
                             <ion-icon name="pin" slot="start"></ion-icon>
                             <ion-label>
-                                Available Times</ion-label>
+                                 Times</ion-label>
                             <ion-button fill="outline" slot="end">Booking</ion-button>
                             <ion-item id="date">
 
@@ -57,7 +57,7 @@ class Football7 extends React.Component {
                         <ion-item>
                             <ion-icon name="pin" slot="start"></ion-icon>
                             <ion-label>
-                                Available Times</ion-label>
+                                 Times</ion-label>
                             <ion-button fill="outline" slot="end">Booking</ion-button>
                             <ion-item id="date">
 
@@ -86,7 +86,7 @@ class Football7 extends React.Component {
                         <ion-item>
                             <ion-icon name="pin" slot="start"></ion-icon>
                             <ion-label>
-                                Available Times</ion-label>
+                                 Times</ion-label>
                             <ion-button fill="outline" slot="end" href="date">Booking</ion-button>
 
                             <ion-item id="date">

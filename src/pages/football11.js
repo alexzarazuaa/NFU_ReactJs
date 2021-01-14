@@ -20,7 +20,7 @@ class Football_11 extends React.Component {
                                 Field 1
                         </h2>
                             <br></br>
-                             <img class="img" src="https://www.alquilerdepistas.com/images/instalaciones/ontinyent-campo-futbol-cesped-artificial-191105151738.jpg"></img>
+                            <img class="img" src="https://www.alquilerdepistas.com/images/instalaciones/ontinyent-campo-futbol-cesped-artificial-191105151738.jpg"></img>
 
 
 
@@ -29,7 +29,7 @@ class Football_11 extends React.Component {
                         <ion-item>
                             <ion-icon name="pin" slot="start"></ion-icon>
                             <ion-label>
-                                Available Times</ion-label>
+                                 Times</ion-label>
                             <ion-button fill="outline" slot="end">Booking</ion-button>
                             <ion-item id="date">
 
@@ -40,64 +40,7 @@ class Football_11 extends React.Component {
 
                     </ion-card>
 
-                    {/* FOOTBALL 11  CARD */}
-                    <ion-card>
-                        <ion-card-header>
 
-                            <h2>
-                                Field 2
-                        </h2>
-                            <br></br>
-                             <img class="img" src="https://www.alquilerdepistas.com/images/instalaciones/ontinyent-campo-futbol-cesped-artificial-191105151738.jpg"></img>
-
-
-
-
-                        </ion-card-header>
-
-                        <ion-item>
-                            <ion-icon name="pin" slot="start"></ion-icon>
-                            <ion-label>
-                                Available Times</ion-label>
-                            <ion-button fill="outline" slot="end">Booking</ion-button>
-                            <ion-item id="date">
-
-                                <ion-datetime display-format="D MMM YYYY H:mm" min="2021" max="2021" value="2021-01-11T11:06Z"></ion-datetime>
-                            </ion-item>
-                        </ion-item>
-
-
-                    </ion-card>
-
-                    {/* FOOTBALL 11  CARD */}
-                    <ion-card>
-                        <ion-card-header>
-
-                            <h2>
-                                Field 3
-                        </h2>
-                            <br></br>
-                             <img class="img" src="https://www.alquilerdepistas.com/images/instalaciones/ontinyent-campo-futbol-cesped-artificial-191105151738.jpg"></img>
-
-
-
-
-                        </ion-card-header>
-
-                        <ion-item>
-                            <ion-icon name="pin" slot="start"></ion-icon>
-                            <ion-label>
-                                Available Times</ion-label>
-                            <ion-button fill="outline" slot="end" href="date">Booking</ion-button>
-
-                            <ion-item id="date">
-
-                                <ion-datetime display-format="D MMM YYYY H:mm" min="2021" max="2021" value="2021-01-11T11:06Z"></ion-datetime>
-                            </ion-item>
-                        </ion-item>
-
-
-                    </ion-card>
 
 
                 </ion-list-header>
@@ -106,9 +49,9 @@ class Football_11 extends React.Component {
 
 
 
-            
-                <Footer/>
-            
+
+                <Footer />
+
 
             </IonPage >
         );
