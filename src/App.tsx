@@ -10,7 +10,7 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { tv, footballOutline, phonePortrait, logoXbox } from 'ionicons/icons';
+import { tv, footballOutline, phonePortrait, homeSharp, homeOutline } from 'ionicons/icons';
 import Epg from './components/Epg-Component/Epg';
 import Home from './components/home-component/home';
 import Contact from './pages/contact'
@@ -58,12 +58,12 @@ const App: React.FC = () => (
           <Route path="/football-7" component={Football7} />
           <Route path="/football-11" component={Football_11} />
           <Route path="/profile" component={Profile} />
-          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+          <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
           <IonTabButton tab="Home" href="/home">
-            <IonIcon icon={logoXbox} />
+            <IonIcon icon={homeSharp} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
           <IonTabButton tab="Modalities" href="/modalities">
