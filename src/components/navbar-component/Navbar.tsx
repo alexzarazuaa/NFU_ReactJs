@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { IonToolbar, IonButtons,  IonButton, IonIcon ,IonLabel} from '@ionic/react';
+import { IonToolbar, IonButtons,  IonButton, IonIcon ,IonLabel, IonSearchbar, IonNav} from '@ionic/react';
 import { person } from 'ionicons/icons';
 import './navbar.css';
 
-class Navbar extends Component {
-    render() {
+const Navbar: React.FC = () => {
+
         return (
 
             <IonToolbar color="dark">
@@ -12,7 +12,7 @@ class Navbar extends Component {
                 <IonButtons slot="secondary">
 
                     <IonButton>
-                        <ion-searchbar show-cancel-button="focus"></ion-searchbar>
+                        <IonSearchbar show-cancel-button="focus"></IonSearchbar>
                     </IonButton>
                     <IonButton  href="/profile">
                         <IonIcon icon={person} />
@@ -23,19 +23,19 @@ class Navbar extends Component {
                 </IonButtons>
 
 
-                <ion-nav className="navBar">
+                <IonNav className="navBar">
 
 
-                    <IonButton color="dark" href="/signin">Sign In</IonButton>
-                    <IonButton color="dark" href="/signup">Sign Up</IonButton>
+                    <IonButton color="dark" href="/login">Sign In</IonButton>
+                    <IonButton color="dark" href="/register">Sign Up</IonButton>
 
 
-                </ion-nav>
+                </IonNav>
 
             </IonToolbar>
 
         );
-    }
+    
 }
 export default Navbar;
 

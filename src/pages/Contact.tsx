@@ -1,10 +1,11 @@
-import { IonCheckbox, IonPage, IonText, IonItem, IonLabel, IonInput, IonButton } from "@ionic/react";
+import { IonCheckbox, IonPage, IonText, IonItem, IonLabel, IonInput, IonButton, IonTextarea } from "@ionic/react";
 import React from "react";
-import Footer from '../components/footer-component/footer'
+import Footer from '../components/footer-component/Footer'
 //import './contact.css';
 
-class Contact extends React.Component {
-    render() {
+
+const Contact: React.FC = () => {
+
         return (
             <IonPage>
 
@@ -21,10 +22,10 @@ class Contact extends React.Component {
                         <IonLabel>Email</IonLabel>
                         <IonInput />
                     </IonItem>
-                    <ion-item>
-                        <ion-label>Message</ion-label>
-                        <ion-textarea rows="8" cols="20" placeholder="   Enter  your message here..."></ion-textarea>
-                    </ion-item>
+                    <IonItem>
+                        <IonLabel>Message</IonLabel>
+                        <IonTextarea  placeholder="Enter  your message here..."></IonTextarea>
+                    </IonItem>
                     <IonButton className="ion-margin-top" type="submit" expand="block">
                         Send Message
                 </IonButton>
@@ -34,7 +35,7 @@ class Contact extends React.Component {
                <Footer/>
             </IonPage >
         );
-    }
+    
 }
 
 export default Contact;
