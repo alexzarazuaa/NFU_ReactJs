@@ -9,6 +9,9 @@ const initialState = {
 }
 
 let reducer = (state, action) => {
+  console.log('REDUCER -------- ')
+  console.log(state,' -------- ')
+  console.log(action,' -------- ')
  
   switch(action.type) {
     case "SET_USER": {      
@@ -16,6 +19,12 @@ let reducer = (state, action) => {
     }
     case "SET_THEME": {
       return { ...state, theme: action.value }
+    }
+    case "SET_LOGOUT":{
+      return { ...state, user: "" }
+    }
+    case "SET_RESET": {
+      return initialState;
     }
 
   }

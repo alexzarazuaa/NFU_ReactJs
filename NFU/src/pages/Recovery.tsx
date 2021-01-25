@@ -3,6 +3,9 @@ import { AppContext } from '../State';
 import { Redirect } from 'react-router-dom';
 import { 
     IonContent, 
+    IonGrid, 
+    IonRow, 
+    IonCol, 
     IonItem,
     IonInput,
     IonButton,
@@ -11,16 +14,16 @@ import {
     IonHeader,
     IonToolbar,
     IonTitle,
+    IonAlert,
     IonLabel,
     IonLoading
 
 } from '@ionic/react';
-import Footer from '../components/Footer/Footer';
-// import { stat } from 'fs';
+import { stat } from 'fs';
 
 
 
-const Login: React.FC = () => {
+const Recovery: React.FC = () => {
     const { state,dispatch } = useContext(AppContext);
     const [ email, setEmail ] = useState<React.ReactText | undefined>('');
     const [ password, setPassword ] = useState<React.ReactText | undefined>('');
@@ -54,7 +57,6 @@ const Login: React.FC = () => {
         console.log(state.user)
         return <Redirect to="/app/home" />   
     }
-    
         
     return (
         
@@ -84,20 +86,16 @@ const Login: React.FC = () => {
                 />
             </IonItem>
        
-            <IonButton expand="block" type="submit">{'Login'}</IonButton>
+            <IonButton expand="block" type="submit">{'Recovery'}</IonButton>
         
             </IonList>
         </form>
-        <div className="below-form">
-            {/*<a className="create" href="#/" onClick={(e) => { e.preventDefault(); goTo('/signup')}}>Create account instead</a> */}
-            <a href="/recovery-password" onClick={(e) => { e.preventDefault(); }}>{'Password Forgotten'}</a>
-        </div>
+    
         
         </IonContent>
-        <Footer/>
     </IonPage>
 
     );
 };
 
-export default Login;
+export default Recovery;

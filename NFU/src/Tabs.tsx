@@ -36,7 +36,7 @@ const Tabs: React.FC = () => {
           </IonTabButton>
           <IonTabButton tab="create" href="/app/create">
             <IonIcon icon={addCircle} />
-            <IonLabel>Añadir evento</IonLabel>
+            <IonLabel>Create Event</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>      

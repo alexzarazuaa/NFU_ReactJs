@@ -37,7 +37,7 @@ export default class Event_List extends React.Component {
       const events_array = Object.values(this.state.events);
       return (
         <>
-          <div>MENU</div>
+          <h1 class="main_title">MENU</h1>
           <div className="events">
           {
               events_array.map((event,index,arr) =>

@@ -1,43 +1,47 @@
-import React,{useContext,useState} from 'react';
+import React, { useContext, useState } from 'react';
 import { AppContext } from '../State';
 
-import { 
-  IonContent, 
-  IonHeader, 
-  IonPage, 
-  IonTitle, 
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
   IonToolbar,
   IonPopover,
   IonList,
   IonItem,
-  IonLabel, 
+  IonLabel,
   IonButtons,
   IonButton,
-  IonIcon 
+  IonIcon
 
 } from '@ionic/react';
+import { personSharp } from 'ionicons/icons';
 import './Home.css';
+import Footer from '../components/Footer/Footer';
 import Event_List from '../components/Event/Event_List';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import { Redirect } from 'react-router-dom';
-import { ellipsisVertical, removeCircleOutline } from 'ionicons/icons';
+import { ellipsisVertical } from 'ionicons/icons';
 
 const Home: React.FC = () => {
-  const { state,dispatch } = useContext(AppContext);
+  const { state, dispatch } = useContext(AppContext);
   const [showUserMenuEvent, setShowUserMenuEvent] = useState(null);
-  const doLogout = () => {    
+  const doLogout = () => {
     setShowUserMenuEvent(null);
-    dispatch({type:'SET_USER',value:''});       
+    dispatch({ type: 'SET_LOGOUT' });
+    window.location.reload();
   };
 
-  if (!state.user) {   
-    return <Redirect to="/" /> 
+  if (!state.user) {
+    console.log('%cNO HAY USER", "color: black; font-weight: 700;');
+    return <Redirect to="/" />
   }
 
   return (
     <IonPage>
-     
+
       <IonHeader>
         <IonToolbar>
           <IonTitle>HOME</IonTitle>
@@ -48,30 +52,33 @@ const Home: React.FC = () => {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>   
-         <IonPopover
-            event={showUserMenuEvent}
-            isOpen={!!showUserMenuEvent}
-            onDidDismiss={() => setShowUserMenuEvent(null)}>
+      <IonContent fullscreen>
+        <IonPopover
+          event={showUserMenuEvent}
+          isOpen={!!showUserMenuEvent}
+          onDidDismiss={() => setShowUserMenuEvent(null)}>
           <IonContent>
             <IonList>
-              <IonItem onClick={e => { e.preventDefault(); doLogout()}} detail={true} href="">
+              <IonItem onClick={e => { e.preventDefault(); doLogout() }} detail={true} href="/login">
                 <IonLabel>LOGOUT</IonLabel>
               </IonItem>
               <IonItem>
+
+                <IonIcon icon={personSharp} />
                 <IonLabel>{state.user}</IonLabel>
               </IonItem>
             </IonList>
           </IonContent>
-          </IonPopover>     
+        </IonPopover>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 1ded</IonTitle>
-            
+
           </IonToolbar>
         </IonHeader>
         <Event_List></Event_List>
       </IonContent>
+      <Footer/>
     </IonPage>
   );
 };
