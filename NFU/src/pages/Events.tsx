@@ -4,6 +4,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import Event_List from '../components/Event/Event_List';
 import Footer from '../components/Footer/Footer';
 import './Events.css';
+import Navbar from '../components/Navbar/Navbar';
 import { Redirect } from 'react-router-dom';
 
 const Events: React.FC = () => {
@@ -15,9 +16,7 @@ const Events: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>EVENTS</IonTitle>
-        </IonToolbar>
+      <Navbar page={"EVENTS"}></Navbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">

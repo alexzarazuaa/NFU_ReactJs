@@ -1,18 +1,10 @@
 import React from 'react';
 import { person, compass } from 'ionicons/icons';
 import {
-    IonSlides,
-    IonSlide,
-    IonRow,  
-    IonLabel,  
+
     IonCard,
-    IonIcon,
-    IonCardHeader,
-    IonCardSubtitle,
-    IonCardTitle,
-    IonCardContent,
-    IonContent
-  
+    IonIcon
+
   } from '@ionic/react';
 
 const Event = (props) =>{

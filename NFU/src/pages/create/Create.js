@@ -3,15 +3,14 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonIcon, IonButto
 import { person, compass, alarm,star } from 'ionicons/icons';
 import { useParams } from "react-router";
 import Footer from '../../components/Footer/Footer';
+import Navbar from '../../components/Navbar/Navbar';
 
 import './create.css';
 const Create= () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Añadir Evento</IonTitle>
-        </IonToolbar>
+      <Navbar page={"CREATE EVENT"}></Navbar>
       </IonHeader>
       <IonContent fullscreen >
         <IonHeader collapse="condense">
