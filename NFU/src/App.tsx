@@ -30,6 +30,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+
 const App: React.FC = () => (
   <AppContextProvider>
   <IonApp>
@@ -37,7 +38,8 @@ const App: React.FC = () => (
       <IonPage>
         <IonRouterOutlet>
           <Route path="/login" component={Login} /> 
-          <Route path="/recovery-password" component={Recovery} />                
+          <Route path="/recovery-password" component={Recovery} />
+             
           <Route path="/" render={() => <Redirect to="/login" />} exact={true} />
         </IonRouterOutlet>
         <Route path="/app" component={Tabs} />

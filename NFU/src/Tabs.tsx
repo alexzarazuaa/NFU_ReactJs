@@ -12,9 +12,10 @@ import {
 
 import Home from './pages/Home';
 import Events from './pages/Events';
-import Details from './pages/Details.js';
+import Details from './pages/instalacion';
 import Create from './pages/create/Create';
-import { home, people, addCircle } from 'ionicons/icons';
+import { home, people, addCircle,barbellSharp } from 'ionicons/icons';
+import Instalaciones from './pages/Instalaciones';
 
 const Tabs: React.FC = () => {
         
@@ -23,6 +24,8 @@ const Tabs: React.FC = () => {
         <IonRouterOutlet>
           <Route path="/app/home" component={Home} exact={true} />
           <Route path="/app/events" component={Events} exact={true} />
+          <Route path="/app/instalaciones" component={Instalaciones} />   
+          <Route path="/app/instalacion/:id" component={Details}/>   
           <Route path="/app/create" component={Create} />          
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -33,6 +36,10 @@ const Tabs: React.FC = () => {
           <IonTabButton tab="events" href="/app/events">
             <IonIcon icon={people} />
             <IonLabel>EVENTS</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="instalaciones" href="/app/instalaciones">
+            <IonIcon icon={barbellSharp} />
+            <IonLabel>Instalaciones</IonLabel>
           </IonTabButton>
           <IonTabButton tab="create" href="/app/create">
             <IonIcon icon={addCircle} />
