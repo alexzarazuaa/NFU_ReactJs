@@ -3,9 +3,6 @@ import { AppContext } from '../State';
 import { Redirect } from 'react-router-dom';
 import { 
     IonContent, 
-    IonGrid, 
-    IonRow, 
-    IonCol, 
     IonItem,
     IonInput,
     IonButton,
@@ -14,12 +11,11 @@ import {
     IonHeader,
     IonToolbar,
     IonTitle,
-    IonAlert,
     IonLabel,
     IonLoading
 
 } from '@ionic/react';
-import { stat } from 'fs';
+
 
 
 

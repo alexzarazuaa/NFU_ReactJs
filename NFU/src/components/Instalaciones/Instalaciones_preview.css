@@ -1,147 +1,74 @@
-.centerCard {
-    height: 200px;
-    width: 100%;
-    max-width: 800px;
-    min-width: 300px;
-    cursor: pointer;
+
+:root{
+    --general-size:100%;
+    --general-justity:center;
+    --general-display:flex;
 }
 
-.centerContent {
-    width: 100%;
-    height: 100%;
+.cardList {
+    height: 200px;
+    width: var(--general-size);
+    max-width: 625px;
+    min-width: 285px;
+    cursor: ns-resize;
+}
+
+.cardContent {
+    width: var(--general-size);
+    height: var(--general-size);
     padding: 10px;
-    display: flex;
+    display: var(--general-display);
     justify-content: space-between;
 }
 
-.centerContent__left {
+.cardContent__left {
     overflow: hidden;
     max-width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: var(--general-display);
+    align-items: var(--general-justity);
+    justify-content: var(--general-justity);
     border-radius: 10px;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25);
 }
 
-.centerContent__left img {
-    height: 100%;
-    width: 100%;
+.cardContent__left img {
+    height: var(--general-size);
+    width: var(--general-size);
     object-fit: cover;
 }
 
-.centerContent__right {
-    width: 100%;
-    height: 100%;
-    display: flex;
+.cardList:hover .cardContent__left img {
+    filter: grayscale(60%);
+    transform: scale(1.4);
+  }
+  
+
+.cardContent__right {
+    width: var(--general-size);
+    height: var(--general-size);
+    display: var(--general-display);
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 30px;
 }
 
-.CenterTitle {
-    color: rgb(41, 41, 41);
-    font-family: Poppins-SemiBold;
-    font-size: 22px;
-}
-
-.centerContent__actions {
+¡
+.cardContent__operation {
     width: 140px;
     border-left: 1px solid rgb(211, 211, 211);
 }
 
-.centerContent__actions--option {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
 
-.centerContent__actions--icon {
+.cardContent__operation--icon {
     transition: 0.1s;
     font-size: 32px;
 }
 
-.option1:hover .centerContent__actions--icon {
-    color: rgb(211, 51, 51);
-    font-size: 34px;
-}
-
-.option2:hover .centerContent__actions--icon {
-    color: rgb(82, 170, 177);
-    font-size: 34px;
-}
-
-.centerInfo {
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-}
-
-.centerInfo article:first-of-type {
-    margin-right: 20px;
-}
-
-.playersIcon {
-    margin-right: 5px;
-}
-
-.centerInfo article {
-    display: flex;
-    align-items: center;
-}
-
-@media screen and (max-width: 550px) {
-    .centerCard {
-        width: 350px;
-        border-radius: 10px;
-        overflow: hidden;
-        margin-bottom: 0px;
-    }
-    .centerContent {
-        color: white;
-        padding: 0px;
-    }
-    .CenterTitle {
-        color: white;
-        text-shadow: 1px 1px 1.5px #000000;
-        position: absolute;
-        bottom: 5px;
-        z-index: 20;
-    }
-    .shadowMobileCard{
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 40px;
-        background-color: rgba(0, 0, 0, 0.308);
-        box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.308);
-    }
-    .CenterLocation{
-        visibility: hidden;
-    }
-    .centerInfo{
-        align-items: flex-start;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-    }
-    .centerInfo--option{
-        padding: 6px;
-        border-radius: 50px;
-        text-shadow: 1px 1px 1.5px #000000;
-        background-color: rgb(56, 125, 146);
-    }
-    .centerContent__left {
-        max-width: 100%;
-    }
-    .centerContent__right {
-        position: absolute;
-    }
-    .centerContent__actions {
-        position: absolute;
-        visibility: hidden;
+@media only screen and (min-width: 1200px){
+    .cardList{
+        position: relative;
+        max-width: 1200px;
+        min-width: 1200px;
+        height: 300px;
     }
 }

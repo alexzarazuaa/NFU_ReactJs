@@ -17,7 +17,7 @@ const Event = (props) =>{
         <>
           <IonCard className="event" onClick={() => eventClick(event.id)} routerLink={'/event/'+event.id} >
             <div className="event-image">
-              <img src={event.image}></img>
+              <img src={event.image} alt="img"></img>
             </div>
             <div className="event-content">
               <span className="event-content-title">{event.title}</span>

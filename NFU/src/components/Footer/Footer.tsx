@@ -1,5 +1,5 @@
 import { IonFooter, IonTitle, IonToolbar } from '@ionic/react';
-import React, { Component } from 'react';
+import React from 'react';
 import './footer.css';
 
 

@@ -12,10 +12,11 @@ import {
 
 import Home from './pages/Home';
 import Events from './pages/Events';
-import Details from './pages/instalacion';
+//import Details from './pages/Details';
 import Create from './pages/create/Create';
 import { home, people, addCircle,barbellSharp } from 'ionicons/icons';
 import Instalaciones from './pages/Instalaciones';
+import Instalacion from './pages/instalacion';
 
 const Tabs: React.FC = () => {
         
@@ -25,7 +26,7 @@ const Tabs: React.FC = () => {
           <Route path="/app/home" component={Home} exact={true} />
           <Route path="/app/events" component={Events} exact={true} />
           <Route path="/app/instalaciones" component={Instalaciones} />   
-          <Route path="/app/instalacion/:id" component={Details}/>   
+          <Route path="/app/instalacion/:id" component={Instalacion}/>   
           <Route path="/app/create" component={Create} />          
         </IonRouterOutlet>
         <IonTabBar slot="bottom">

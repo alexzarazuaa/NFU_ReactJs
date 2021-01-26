@@ -1,18 +1,6 @@
 import React from 'react';
 import events from '../../data/data.json';
-import {
-  IonSlides,
-  IonSlide,
-  IonContent,
-  IonRow,  
-  IonLabel,  
-  IonCard,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
-  IonCardContent
 
-} from '@ionic/react';
 import './event.css';
 
 import Event from './Event.js';
